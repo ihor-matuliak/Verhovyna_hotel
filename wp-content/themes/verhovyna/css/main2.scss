@@ -128,7 +128,19 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 
     .block_img{
+        position: relative;
         width: 62%;
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #2B3239;
+            opacity: 0.2;
+        }
     }
 
     .block_info{
@@ -277,5 +289,58 @@ $outside_width: calc((100vw - 1280px) / 2);
 
     .linl_with_img{
         display: inline-block;
+    }
+}
+
+@media screen and (max-width:1600px){
+    .chess_section{
+        .block_img{
+            width: 55%;
+        }
+
+        .block_info{
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width:1450px){
+    .container_right{
+        padding-right: 24px;
+    }
+    
+    .container_left{
+        padding-left: 24px;
+    }
+
+    .chess_section{
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        .container_right{
+            .block_info{
+                padding-left: 40px;
+            }
+        }
+        
+        .container_left{
+            .block_info{
+                padding-right: 40px;
+            }
+        }
+
+        .chess_block:not(:last-child){
+            margin-bottom: 80px;
+        }
+
+        .block_img,
+        .block_info{
+            width: 50%;
+        }
+
+        .block_info{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
     }
 }
