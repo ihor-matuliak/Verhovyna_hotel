@@ -1,0 +1,281 @@
+@import 'standart_style';
+
+// Colors
+$text_color: #42474C;
+$title_color: #D6B480;
+$title_light: #FCF6F0;
+$disabled: #EDEFF2;
+$bg_color: #FCF6F0;
+
+
+a,
+path{
+    transition: all .4s;
+}
+
+.linl_with_img{
+    position: relative;
+    padding-left: 40px;
+    font-family: 'Gotham_Pro';
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    color: $text_color;
+
+    .icon{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    a{
+        font-family: 'Gotham_Pro';
+    }
+
+    a:hover{
+        color: $title_color;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 16px;
+    }
+}
+
+//container
+$outside_width: calc((100vw - 1280px) / 2);
+
+.container_right{
+    width: 100%;
+    padding-right: $outside_width;
+}
+
+.container_left{
+    width: 100%;
+    padding-left: $outside_width;
+}
+
+// banner second
+.banner_second{
+    .container_banner{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #16191D;
+            opacity: 0.72;
+        }
+
+        .title_banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        h1{
+            white-space: nowrap;
+            background: -webkit-linear-gradient(#E0BE8A, #FCF6F0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.chess_section{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: $bg_color;
+
+    .chess_block{
+        display: flex;
+
+        &:not(:last-child){
+            margin-bottom: 104px;
+        }
+    }
+
+    .container_right{
+        .block_info{
+            padding-left: 80px;
+        }
+    }
+
+    .container_left{
+        flex-direction: row-reverse;
+        .block_info{
+            padding-right: 80px;
+        }
+    }
+
+    .frame{
+        max-width: 174px;
+        max-height: 72px;
+        margin-bottom: 24px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .block_img{
+        width: 62%;
+    }
+
+    .block_info{
+        width: 38%;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    img{
+        @include cover_img;
+    }
+
+    h2{
+        margin-bottom: 24px;
+    }
+
+    .text{
+        margin-bottom: 34px;
+    }
+
+    .contact_info{
+        margin-bottom: 40px;
+    }
+    
+    .linl_with_img{
+        text-transform: uppercase;
+    }
+
+    .wrap_btns{
+        display: flex;
+    }
+
+    .circle_btn{
+        margin-right: 50px;
+
+        .circle{
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover{
+            .circle:before{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .btn_main{
+        background-color: transparent;
+    }
+}
+
+.section_benefits{
+    background-color: $bg_color;
+
+    .container{
+        padding-bottom: 130px;
+    }
+    
+    .benefits_block{
+        &:not(:last-child){
+            margin-bottom: 120px;
+        }
+    }
+
+    .block_img{
+        width: 100%;
+        height: 564px;
+        margin-bottom: 56px;
+
+        img{
+            @include cover_img;
+        }
+    }
+
+    .wrap_descriptions{
+        display: flex;
+    }
+
+    .text_editor{
+        width: 50%;
+        padding-right: 24px;
+    }
+
+    .circle_btn{
+        .circle{
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover{
+            .circle:before{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.before_footer_section{
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #2B3239;
+        opacity: 0.84;
+    }
+
+    *{
+        color: $title_light;
+    }
+
+    .container{
+        position: relative;
+        z-index: 10;
+        padding: 120px;
+        padding-bottom: 120px;
+    }
+
+    .info_block{
+        text-align: center;
+    }
+
+    h2{
+        width: 70%;
+        background: -webkit-linear-gradient(#E0BE8A, #FCF6F0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0 auto 32px;
+    }
+
+    .btn_main{
+        background: transparent;
+        margin: 0 auto 32px;
+    }
+
+    p{
+        margin-bottom: 32px;
+    }
+
+    .linl_with_img{
+        display: inline-block;
+    }
+}

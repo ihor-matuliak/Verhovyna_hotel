@@ -1,0 +1,485 @@
+@font-face {
+    font-family: 'Azbuka_04';
+    src: url("fonts/Azbuka_04.ttf"),
+}
+
+@font-face {
+    font-family: 'Old_Standard_TT';
+    src: url("fonts/Old_Standard_TT.ttf"),
+}
+
+@font-face {
+    font-family: 'Gotham_Pro';
+    src: url("fonts/Gotham_Pro.ttf"),
+}
+
+// Mixins
+@mixin cover_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin contain_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin center_x {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin three_rows {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin two_rows {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin one_row {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Colors
+$text_color: #42474C;
+$title_color: #D6B480;
+$disabled: #EDEFF2;
+
+// reset styles
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: $text_color;
+    font-family: 'Gotham_Pro';
+    line-height: 1.8;
+    vertical-align: baseline;
+    outline: none;
+}
+
+button {
+    border: none;
+    -webkit-appearance: none;
+}
+
+select {
+    -webkit-appearance: none !important;
+}
+
+// Containers
+$outside_width: calc((100vw - 1328px) / 2);
+
+.container {
+    max-width: 1328px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+}
+
+// Standart styles
+
+body {
+    overflow-x: hidden;
+}
+
+body.dont_scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
+blockquote {
+    line-height: 2;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    color: $text_color;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $title_color;
+    position: relative;
+    font-family: 'Azbuka_04';
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+ol li {
+    list-style-type: decimal;
+}
+
+path {
+    transition: all .4s ease-in-out;
+}
+
+.text_editor {
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    *:first-child {
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+
+    h1 {
+        margin-top: 52px;
+        margin-bottom: 38px;
+    }
+
+    h2 {
+        margin-top: 46px;
+        margin-bottom: 32px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 38px;
+        margin-bottom: 32px;
+    }
+
+    ul{
+        li{
+            position: relative;
+            padding-left: 44px;
+            margin-bottom: 30px;
+
+            &:before{
+                content: '';
+                position: absolute;
+                background-image: url('/image/li_img.svg');
+                background-repeat: no-repeat;
+                top: 0;
+                left: 0;
+                height: 32px;
+                width: 20px;
+            }
+        }
+    }
+
+}
+
+.btn_main {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    z-index: 10;
+    color: $text_color;
+    padding: 17px 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 2px solid $title_color;
+    background-color: #FFFFFF;
+    transition: all .4s ease-in-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .4s;
+        width: 0;
+        height: 100%;
+        background: $title_color;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: #FCF6F0;
+        cursor: pointer;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &.second_btn {
+        padding: 22px 32px;
+    }
+
+    &.fill_btn {
+        padding: 22px 32px;
+        background-color: $title_color;
+        color: #FCF6F0;
+
+        &:hover {
+            background-color: #BA9966;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &.disabled {
+            color: #D3D9DF;
+            background-color: #EDEFF2;
+            cursor: not-allowed;
+            border: 1px solid #EDEFF2;
+        }
+    }
+
+    &.disabled {
+        color: #D3D9DF;
+        background-color: #EDEFF2;
+        cursor: not-allowed;
+        border: 1px solid #EDEFF2;
+    }
+
+}
+
+.circle_btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transition: all .4s ease-in-out;
+    font-size: 18px;
+
+    .circle {
+        margin-left: 16px;
+        border: 2px solid $title_color;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        position: relative;
+
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 20;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            content: '';
+            @include center();
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background-color: $title_color;
+            transition: all .4s ease-in-out;
+            z-index: 10;
+        }
+    }
+
+    &:hover {
+        .circle::before {
+            width: 54px;
+            height: 54px;
+        }
+
+        path {
+            stroke: #FFF;
+        }
+        cursor: pointer;
+    }
+
+}
+
+.link {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.8;
+    width: fit-content;
+    display: inline-block;
+    padding-left: 20px;
+    transition: all .4s ease-in-out;
+
+    &::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $title_color;
+        border-right: 2px solid $title_color;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-60%) rotate(45deg);
+    }
+
+    &:hover {
+        letter-spacing: 0.04em;
+        color: $title_color;
+        cursor: pointer;
+    }
+}
+
+
+.subtitle {
+    font-family: 'Old_Standard_TT';
+    color: $title_color;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.subtitle_small {
+    font-family: 'Old_Standard_TT';
+    color: $title_color;
+    padding-left: 10px;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 1328px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .text_editor {
+        h1 {
+            margin-top: 44px;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 32px;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 36px;
+            margin-bottom: 32px;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 15px;
+    }
+}
