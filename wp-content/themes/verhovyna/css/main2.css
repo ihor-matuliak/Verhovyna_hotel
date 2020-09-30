@@ -560,6 +560,7 @@ path {
 }
 
 .chess_section img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -739,6 +740,92 @@ path {
   .chess_section .block_info {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .section_benefits .container {
+    padding-bottom: 80px;
+  }
+  .section_benefits .benefits_block:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  .section_benefits .benefits_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section_benefits .wrap_descriptions {
+    display: block;
+  }
+  .section_benefits .block_img {
+    margin-bottom: 0;
+  }
+  .section_benefits .text_editor {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+  .section_benefits h2 {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .chess_section .wrap_btns {
+    display: block;
+  }
+  .chess_section .circle_btn {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .chess_section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .chess_section .container_right {
+    padding-left: 24px;
+  }
+  .chess_section .container_right .block_info {
+    padding-left: 0;
+  }
+  .chess_section .container_left {
+    padding-right: 24px;
+  }
+  .chess_section .container_left .block_info {
+    padding-right: 0;
+  }
+  .chess_section .chess_block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .chess_section .chess_block:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .chess_section .block_img,
+  .chess_section .block_info {
+    width: 100%;
+  }
+  .chess_section .block_img {
+    height: 350px;
+  }
+  .chess_section .block_info {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .section_benefits .benefits_block:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .section_benefits .block_img {
+    height: 350px;
   }
 }
 /*# sourceMappingURL=main2.css.map */

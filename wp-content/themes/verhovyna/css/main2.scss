@@ -150,6 +150,7 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 
     img{
+        display: block;
         @include cover_img;
     }
 
@@ -341,6 +342,112 @@ $outside_width: calc((100vw - 1280px) / 2);
         .block_info{
             padding-top: 60px;
             padding-bottom: 60px;
+        }
+    }
+
+    .section_benefits{
+        .container{
+            padding-bottom: 80px;
+        }
+
+        .benefits_block:not(:last-child){
+            margin-bottom: 80px;
+        }
+
+        .benefits_block{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .wrap_descriptions{
+            display: block;
+        }
+
+        .block_img{
+            margin-bottom: 0;
+        }
+
+        .text_editor{
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 24px;
+        }
+
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px){
+    .chess_section{
+        .wrap_btns{
+            display: block;
+        }
+
+        .circle_btn{
+            margin-right: 0;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    .chess_section{
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .container_right{
+            padding-left: 24px;
+
+            .block_info{
+                padding-left: 0;
+            }
+        }
+
+        .container_left{
+            padding-right: 24px;
+
+            .block_info{
+                padding-right: 0;
+            }
+        }
+
+        .chess_block{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            &:not(:last-child){
+                margin-bottom: 60px;
+            }
+        }
+
+        .block_img,
+        .block_info{
+            width: 100%;
+        }
+
+        .block_img{
+            height: 350px;
+        }
+
+        .block_info{
+            padding-top: 0;
+            padding-bottom: 40px;
+        }
+
+        
+    }
+
+    .section_benefits{
+        .benefits_block{
+            &:not(:last-child){
+                margin-bottom: 60px;
+            }
+        }
+
+        .block_img{
+            height: 350px;
         }
     }
 }
