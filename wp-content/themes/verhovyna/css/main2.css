@@ -35,6 +35,7 @@ select {
 }
 
 .container {
+  width: 100%;
   max-width: 1328px;
   padding-left: 24px;
   padding-right: 24px;
@@ -423,7 +424,7 @@ path {
   transition: all .4s;
 }
 
-.linl_with_img {
+.link_with_img {
   position: relative;
   padding-left: 40px;
   font-family: 'Gotham_Pro';
@@ -433,21 +434,21 @@ path {
   color: #42474C;
 }
 
-.linl_with_img .icon {
+.link_with_img .icon {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.linl_with_img a {
+.link_with_img a {
   font-family: 'Gotham_Pro';
 }
 
-.linl_with_img a:hover {
+.link_with_img a:hover {
   color: #D6B480;
 }
 
-.linl_with_img:not(:last-child) {
+.link_with_img:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -579,7 +580,7 @@ path {
   margin-bottom: 40px;
 }
 
-.chess_section .linl_with_img {
+.chess_section .link_with_img {
   text-transform: uppercase;
 }
 
@@ -675,12 +676,22 @@ path {
 .before_footer_section .container {
   position: relative;
   z-index: 10;
-  padding: 120px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
 .before_footer_section .info_block {
   text-align: center;
+}
+
+.before_footer_section .subtitle {
+  font-family: "Azbuka_04";
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FCF6F0;
 }
 
 .before_footer_section h2 {
@@ -689,6 +700,10 @@ path {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 auto 32px;
+}
+
+.before_footer_section .circle_btn {
+  margin: 0 auto;
 }
 
 .before_footer_section .btn_main {
@@ -700,8 +715,148 @@ path {
   margin-bottom: 32px;
 }
 
-.before_footer_section .linl_with_img {
+.before_footer_section .link_with_img {
   display: inline-block;
+}
+
+.section_menu {
+  background-color: #FCF6F0;
+}
+
+.section_menu .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section_menu .menu_item_block:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.section_menu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section_menu .info_item {
+  width: 50%;
+  padding-right: 36px;
+  margin-bottom: 32px;
+}
+
+.section_menu .item_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dashed #D6B480;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.section_menu .item_name .name {
+  font-family: 'Azbuka_04';
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: #42474C;
+  padding-right: 24px;
+}
+
+.section_menu .item_name .price {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: #D6B480;
+}
+
+.section_menu .description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #42474C;
+}
+
+.nav_for_section {
+  margin-bottom: 56px;
+}
+
+.nav_for_section .nav_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.nav_for_section a {
+  position: relative;
+  display: inline-block;
+  font-family: 'Gotham_Pro';
+  font-size: 16px;
+  line-height: 1.2;
+  color: #42474C;
+  padding: 0 24px 30px;
+}
+
+.nav_for_section a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  background-color: #D6B480;
+}
+
+.nav_for_section a:hover:after {
+  width: 100%;
+}
+
+.banner_block_ {
+  position: relative;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-bottom: 54px;
+}
+
+.banner_block_:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(22, 25, 29, 0.72);
+  z-index: -1;
+}
+
+.banner_block_ h2 {
+  font-family: 'Azbuka_04';
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #FCF6F0;
 }
 
 @media screen and (max-width: 1600px) {
@@ -770,6 +925,17 @@ path {
   .section_benefits h2 {
     margin-bottom: 24px;
   }
+  .before_footer_section .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .before_footer_section h2 {
+    width: 100%;
+  }
+  .section_menu .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -783,6 +949,9 @@ path {
 }
 
 @media screen and (max-width: 992px) {
+  .banner_block_ {
+    margin-bottom: 40px;
+  }
   .chess_section {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -826,6 +995,46 @@ path {
   }
   .section_benefits .block_img {
     height: 350px;
+  }
+  .before_footer_section .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .before_footer_section .subtitle {
+    font-size: 16px;
+  }
+  .section_menu .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .section_menu .info_item {
+    width: 100%;
+    padding-right: 0;
+  }
+  .nav_for_section {
+    margin-bottom: 34px;
+  }
+  .nav_for_section a {
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .before_footer_section .btn_main {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .section_menu .info_item:last-child {
+    margin-bottom: 0;
+  }
+  .section_menu .item_name .name {
+    font-size: 16px;
+  }
+  .section_menu .item_name .price {
+    font-size: 14px;
+    margin-top: 4px;
   }
 }
 /*# sourceMappingURL=main2.css.map */

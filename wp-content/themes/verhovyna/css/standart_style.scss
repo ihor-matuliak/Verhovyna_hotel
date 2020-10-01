@@ -102,6 +102,7 @@ select {
 $outside_width: calc((100vw - 1328px) / 2);
 
 .container {
+    width: 100%;
     max-width: 1328px;
     padding-left: 24px;
     padding-right: 24px;
