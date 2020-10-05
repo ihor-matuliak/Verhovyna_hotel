@@ -436,6 +436,177 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 }
 
+.section_history{
+    background-color: $bg_color;
+
+    .container{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    p{
+        font-family: 'Gotham_Pro';
+        font-weight: 300;
+        line-height: 1.5;
+        color: $text_color;
+    }
+
+    .title_page{
+        font-family: 'Azbuka_04';
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 1.4;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $title_color;
+        margin-bottom: 24px;
+    }
+
+    .history_title_block{
+        width: 100%;
+        max-width: 1060px;
+        margin-bottom: 110px;
+        text-align: center;
+        margin: 0 auto 110px;
+
+        .title_wrap{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        h3{
+            font-family: 'Old Standard TT';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 1.4;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: $title_color;
+            margin-bottom: 24px;
+        }
+
+        p{
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        img{
+            width: 100%; 
+        }
+    }
+
+    .item_block{
+        display: flex;
+        margin-bottom: 110px;
+        
+       .item_text{
+            display: flex;
+            align-items: flex-end;
+            padding-right: 100px;
+            padding-left: 48px;
+            padding-bottom: 100px;
+       }
+
+       p{
+           height: fit-content;
+       }
+    }
+
+    .item_block:nth-child(even){
+        flex-direction: row-reverse;
+
+        .item_text{
+            padding-right: 48px;
+            padding-left: 100px;
+       }
+    }
+
+    .item_block:last-child{
+        margin-bottom: 0;
+    }
+
+    .item_text,
+    .item_img{
+        width: 50%;
+    }
+
+    .item_img{
+        img{
+            width: 100%; 
+            max-height: 600px;
+            object-fit: contain;
+        }
+    }
+
+    .text_wrap{
+        position: relative;
+    }
+
+    .bg_date{
+        position: absolute;
+        top: -86px;
+        left: -48px;
+        font-family: Crimson;
+        font-weight: 300;
+        font-size: 192px;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        color: $title_color;
+        opacity: 0.12;
+    }
+
+    .circle_btn{
+        margin-top: 32px;
+    }
+
+    .banner_history{
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:before,
+        &:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &:before{
+            background: linear-gradient(180deg, #807565 0%, rgba(128, 117, 101, 0) 100%);
+            opacity: 0.4; 
+        }
+
+        &:after{ 
+            background: linear-gradient(90deg, rgba(22, 25, 29, 0.65) 48.1%, rgba(22, 25, 29, 0) 100%);
+            opacity: 0.8; 
+        }
+
+        .container{
+            position: relative;
+            padding-top: 420px;
+            padding-bottom: 130px;
+            z-index: 10;
+        }
+
+        p{
+            width: 50%;
+            color: $title_light;
+            padding-left: 48px;
+        }
+
+        .bg_img{
+            position: absolute;
+            top: -48px;
+            left: 0px;
+        }
+    }
+}
+
 @media screen and (max-width:1600px){
     .chess_section{
         .block_img{
@@ -538,6 +709,39 @@ $outside_width: calc((100vw - 1280px) / 2);
             padding-bottom: 80px;
         }
     }
+
+    .section_history{
+        .container{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .banner_history{
+            .container{
+                padding-top: 300px;
+                padding-bottom: 80px;
+            }
+        }
+
+        .history_title_block{
+            margin-bottom: 80px;
+        }
+
+        .item_block,
+        .item_block:nth-child(even){
+            margin-bottom: 80px;
+
+            .item_text{
+                padding-right: 48px;
+                padding-left: 48px;
+                padding-bottom: 80px;
+            }
+        }
+
+        .item_block:last-child{
+            margin-bottom: 0;
+        }
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -549,6 +753,26 @@ $outside_width: calc((100vw - 1280px) / 2);
         .circle_btn{
             margin-right: 0;
             margin-bottom: 24px;
+        }
+    }
+
+    .section_history{
+        .history_title_block{
+           .title_wrap{
+               padding: 0;
+           }
+        }
+
+        .item_block{
+            .item_text{
+                padding-left: 0;
+            }
+        }
+
+        .item_block:nth-child(even){
+            .item_text{
+                padding-right: 0;
+            }
         }
     }
 }
@@ -647,7 +871,77 @@ $outside_width: calc((100vw - 1280px) / 2);
             padding-bottom: 16px;
         }
     }
+
+    .section_history{
+        .container{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .title_page{
+            font-size: 30px;
+        }
+
+        .item_block{
+            flex-wrap: wrap;
+
+            .item_text,
+            .item_img{
+                width: 100%;
+            }
+
+            .item_text{
+                padding: 0;
+                margin-bottom: 24px;
+            }
+        }
+
+        .item_block:nth-child(even){
+            .item_text{
+                padding: 0;
+            }
+        }
+
+        .banner_history{
+            p{
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        .bg_date{
+            font-size: 100px;
+            top: -46px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .history_title_block{
+            h3{
+                font-size: 26px;
+            }
+
+            p{
+                margin-bottom: 40px;
+            }
+        }
+
+        .banner_history{
+            .container{
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+        }
+
+        .circle_btn{
+            margin: 32px auto 0;
+        }
+    }
     
+}
+
+@media screen and (max-width:768px){
+
 }
 
 @media screen and (max-width:576px){
