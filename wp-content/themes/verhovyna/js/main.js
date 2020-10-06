@@ -8,6 +8,23 @@ $(document).ready(function () {
         arrows: false,
         dots: false
     });
+    $('.room_slider').slick({
+        slidesToShow: 1,
+        nextArrow: `<div class='next_slide'><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9.99902H19" stroke="#42474C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 1L19 10L10 19" stroke="#42474C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`,
+        prevArrow: `<div class='prev_slide'><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 9.99902H1" stroke="#2B3239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 1L1 10L10 19" stroke="#2B3239" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`,
+        arrows: true,
+        dots: true,
+        fade: true,
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 577,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
 
     $('.slider_three_show').slick({
         slidesToShow: 3,
@@ -64,9 +81,15 @@ $(document).ready(function () {
     }
 
     setImgHeight('slide_box', '1.31');
+    setImgHeight('room_slide', '0.78');
+    setImgHeight('block_info_img', '0.69');
+    setImgHeight('detail_chess_img', '0.88');
 
     window.addEventListener('resize', function () {
         setImgHeight('slide_box', '1.31');
+        setImgHeight('room_slide', '0.78');
+        setImgHeight('block_info_img', '0.69');
+        setImgHeight('detail_chess_img', '0.88');
     });
 
 
