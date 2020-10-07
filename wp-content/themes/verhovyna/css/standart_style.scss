@@ -97,6 +97,17 @@ button {
 select {
     -webkit-appearance: none !important;
 }
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: $text_color;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $title_color;
+}
 
 // Containers
 $outside_width: calc((100vw - 1328px) / 2);

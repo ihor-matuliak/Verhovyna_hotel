@@ -741,6 +741,214 @@
   max-height: 746px;
 }
 
+.room_detail .chess_section .block_info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.room_detail .chess_section {
+  background-color: #ffffff;
+}
+
+.room_detail .chess_section .block_img {
+  max-height: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.room_detail .chess_section .block_img::before {
+  display: none;
+}
+
+.room_detail .offer {
+  padding-top: 0;
+}
+
+.room_detail .room_slide {
+  max-height: 746px;
+}
+
+.room_detail .chess_section .block_img {
+  width: 60%;
+  max-width: 954px;
+}
+
+.room_detail .chess_section .container_right .block_info {
+  padding-left: 116px;
+}
+
+.room_detail .chess_section .block_info {
+  width: 40%;
+}
+
+.seasons_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.season {
+  margin-right: 72px;
+  margin-bottom: 24px;
+}
+
+.season h6 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.season:last-child {
+  margin-right: 0;
+}
+
+.room_price {
+  font-size: 48px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.room_price span {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.room_slider .slick-dots {
+  height: 5px;
+  background-color: rgba(66, 71, 76, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 522px;
+  left: unset;
+  bottom: -48px;
+  right: 0;
+}
+
+.room_slider .slick-arrow {
+  position: absolute;
+  bottom: -65px;
+}
+
+.room_slider .slick-arrow:hover {
+  cursor: pointer;
+}
+
+.room_slider .slick-arrow:hover path {
+  stroke: #D6B480;
+}
+
+.room_slider .next_slide {
+  right: 550px;
+}
+
+.room_slider .prev_slide {
+  right: 607px;
+}
+
+.room_slider .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.room_slider .slick-active {
+  background-color: #D6B480;
+}
+
+.room_slider .slick-dots li {
+  position: relative;
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.room_slider .slick-dots li button {
+  display: block;
+  height: 5px;
+  width: 100%;
+  font-size: 0px;
+  padding: 0;
+}
+
+.room_slider .slick-dots li button:before {
+  display: none;
+}
+
+.room_slider.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list_wrspper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list_wrspper li {
+  width: 30%;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.list_wrspper li::before {
+  content: '';
+}
+
+.list_wrspper li span {
+  margin-right: 12px;
+}
+
+.room_slide {
+  max-height: 746px;
+}
+
+.room_detail .chess_section .block_img {
+  width: 60%;
+  max-width: 842px;
+}
+
+.room_detail .chess_section .detail_chess_img {
+  width: 53%;
+}
+
+.room_detail .chess_section .detail_block_info {
+  width: 47%;
+}
+
+.room_detail .chess_section .block_img {
+  max-height: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.detail_block_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 @media only screen and (max-width: 1600px) {
   .page_description {
     padding: 90px 0 80px;
@@ -754,6 +962,9 @@
   }
   .grid_el {
     height: 23vw;
+  }
+  .room_detail .chess_section .container_right .block_info {
+    padding-left: 5%;
   }
 }
 
@@ -792,6 +1003,20 @@
   .slide_three {
     margin-right: 24px;
   }
+  .room_slider .slick-dots {
+    width: calc(100% - 120px);
+    left: 120px;
+    bottom: -48px;
+    right: unset;
+  }
+  .room_slider .prev_slide {
+    right: unset;
+    left: 24px;
+  }
+  .room_slider .next_slide {
+    right: unset;
+    left: 68px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -817,7 +1042,7 @@
     padding: 80px 0 90px;
   }
   .slider_three_wrapper .slick-dots {
-    width: 100%;
+    width: calc(100vw - 48px);
     left: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -844,10 +1069,80 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 76px;
+    padding-right: 12px;
   }
   main .circle_btn .circle {
     width: 48px;
     height: 48px;
+  }
+  .room_price {
+    font-size: 34px;
+  }
+  .season {
+    margin-right: 54px;
+  }
+  .seasons_wrapper {
+    margin-bottom: 24px;
+  }
+  .detail_chess_section .chess_block {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .detail_chess_section .container_right {
+    padding-right: 0;
+  }
+  .detail_chess_section .block_img {
+    margin-top: 42px;
+  }
+  .room_detail .chess_section.detail_chess_section .block_info {
+    width: 100%;
+  }
+  .room_detail .chess_section.detail_chess_section .block_img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .room_detail .detail_chess_section .block_info {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .room_detail .chess_section.detail_chess_section .container_right .block_info {
+    padding-left: 24px;
+  }
+  .chess_section.detail_chess_section .chess_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .detail_chess_section .room_slide {
+    max-height: 450px;
+  }
+  .chess_section {
+    margin-bottom: 60px;
+  }
+  .chess_section.detail_chess_section .container_right {
+    padding-left: 0;
+  }
+  .detail_chess_second .block_info_img {
+    display: none;
+  }
+  .detail_chess_second.chess_section .container_left .block_info {
+    padding-right: 0;
+  }
+  .detail_chess_second .container_left {
+    padding-left: 0;
+  }
+  .room_detail .detail_chess_section.detail_chess_second .block_info {
+    padding-left: 0;
+  }
+  .detail_chess_second.chess_section .container_left .block_info.detail_block_info {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .detail_chess_second .block_img {
+    margin-top: 0;
+  }
+  .room_detail .chess_section.chess_section_second .block_img.detail_chess_img {
+    max-height: 350px;
   }
 }
 
@@ -875,6 +1170,25 @@
   .second_line,
   .first_line {
     display: none;
+  }
+  .rooms_services {
+    padding-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .room_slide {
+    max-height: 500px;
+  }
+  .chess_section {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 924px) {
+  .list_wrspper li {
+    width: 50%;
+    font-size: 14px;
   }
 }
 
@@ -940,11 +1254,88 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .room_price {
+    font-size: 34px;
+  }
+  .room_slider .slick-dots {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 20;
+    background-color: rgba(237, 236, 231, 0.5);
+    padding: 0 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .room_slider .slick-dots li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #42474C;
+    opacity: 0.9;
+    margin: 0 8px;
+  }
+  .room_slider .slick-dots .slick-active {
+    background-color: #D6B480;
+  }
+  .seasons_wrapper {
+    margin-bottom: 12px;
+  }
+  .room_price {
+    font-size: 22px;
+  }
+  .room_price span {
+    font-size: 16px;
+  }
+  .season_duration {
+    font-size: 12px;
+  }
+  .season {
+    margin-right: 22px;
+  }
+  .rooms_services {
+    padding-top: 0;
+  }
+  .list_wrspper {
+    max-height: 250px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .list_wrspper::-webkit-scrollbar {
+    width: 3px;
+  }
+  .list_wrspper::-webkit-scrollbar-track {
+    background-color: #42474C;
+  }
+  .list_wrspper::-webkit-scrollbar-thumb {
+    background-color: #D6B480;
+  }
+  .list_wrspper li {
+    margin-bottom: 10px;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 460px) {
   .slider_three_wrapper .slick-list {
     padding-right: 70px;
+  }
+  .season h6 {
+    margin-bottom: 0;
   }
 }
 
@@ -957,6 +1348,18 @@
   }
   .slide_three .grid_title {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .season {
+    margin-right: 22px;
+  }
+  .seasons_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=main.css.map */
