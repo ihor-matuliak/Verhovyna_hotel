@@ -145,8 +145,8 @@ $outside_width: calc((100vw - 1280px) / 2);
 
     .block_info{
         width: 38%;
-        padding-top: 150px;
-        padding-bottom: 150px;
+        height: fit-content;
+        margin: auto 0;
     }
 
     img{
@@ -650,6 +650,21 @@ $outside_width: calc((100vw - 1280px) / 2);
         flex-wrap: wrap;
     }
 
+    .services_wrap:nth-child(2n){
+        .service_block{
+            flex-direction: row-reverse;
+        }
+    
+        .service_name{
+            &:after{
+                top: 50%;
+                left: 0;
+                right: inherit;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
     .service_block{
         display: flex;
         width: 50%;
@@ -706,19 +721,92 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 }
 
-.services_wrap:nth-child(2n){
-    .service_block{
-        flex-direction: row-reverse;
+.medical_center_gallery.gallery{
+    background-color: $bg_color;
+    padding-top: 0;
+    &:before{
+        display: none;
     }
 
-    .service_name{
-        &:after{
-            top: 50%;
-            left: 0;
-            right: inherit;
-            transform: translate(-50%, -50%) rotate(45deg);
+    .container{
+        margin-bottom: 0;
+    }
+
+    .grid_title{
+        font-family: 'Azbuka_04';
+        font-weight: 300;
+    }
+}
+
+.section_programs_center{
+    background-color: $bg_color;
+
+    .container{
+        padding-top: 120px;
+    }
+
+    h2{
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .programs_wrap{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #2B3239;
+    }
+
+    .program_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100% / 3);
+        border-right: 1px solid #2B3239;
+        border-bottom: 1px solid #2B3239;
+        transition: all .4s;
+        padding: 46px 46px 32px;
+
+        &:hover{
+            background-color: #FFFFFF;
         }
     }
+
+    .program_block:nth-child(3n+3){
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid #2B3239;
+    }
+
+    .program_block:nth-last-child(-n+3){
+        border-bottom: 1px solid transparent;
+    }
+
+    .program_name{
+        font-size: 24px;
+        @include two_rows();
+    }
+
+    img{
+        max-height: 100px;
+        margin-bottom: 24px;
+    }
+
+    .circle_btn{
+        .circle{
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover{
+            .circle:before{
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}
+
+.medical_slider.offer{
+    background-color: $bg_color;
 }
 
 @media screen and (max-width:1600px){
@@ -765,11 +853,6 @@ $outside_width: calc((100vw - 1280px) / 2);
         .block_img,
         .block_info{
             width: 50%;
-        }
-
-        .block_info{
-            padding-top: 60px;
-            padding-bottom: 60px;
         }
     }
 
@@ -861,6 +944,25 @@ $outside_width: calc((100vw - 1280px) / 2);
         .container{
             padding-top: 80px;
             padding-bottom: 80px;
+        }
+    }
+
+    .section_programs_center{
+        .container{
+            padding-top: 80px;
+        }
+
+        .program_block{
+            padding: 24px;
+        }
+
+        img{
+            max-height: 70px;
+            margin-bottom: 16px;
+        }
+
+        .program_name{
+            font-size: 20px;
         }
     }
 }
@@ -1108,6 +1210,33 @@ $outside_width: calc((100vw - 1280px) / 2);
             width: 100%;
         }
     }
+
+    .section_programs_center{
+        .container{
+            padding-top: 60px;
+        }
+
+        .program_block{
+            width: calc(100%/2);
+        }
+
+        .program_block:nth-child(3n+3){
+            border-right: inherit;
+            border-bottom: inherit;
+        }
+    
+        .program_block:nth-last-child(-n+3){
+            border-bottom: inherit;
+        }
+
+        .program_block:nth-child(2n){
+            border-right: transparent;
+        }
+
+        .program_block:nth-last-child(-n+2){
+            border-bottom-color: transparent;
+        }
+    }
 }
 
 @media screen and (max-width:768px){
@@ -1189,5 +1318,20 @@ $outside_width: calc((100vw - 1280px) / 2);
         }
     }
 
+    .section_programs_center{
+        .program_block{
+            width: calc(100%);
+            border-right: 0!important;
+        }
+
+        .program_block:nth-last-child(-n+2){
+            border-bottom: inherit;
+        }
+
+        .program_block:nth-last-child(){
+            border-bottom: 0;
+        }
+
+    }
     
 }
