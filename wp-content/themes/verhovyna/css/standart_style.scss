@@ -97,6 +97,7 @@ button {
 select {
     -webkit-appearance: none !important;
 }
+
 body::-webkit-scrollbar {
     width: 5px;
 }
@@ -157,6 +158,10 @@ h6 {
 
 h1 {
     font-size: 56px;
+    background: -webkit-linear-gradient(#E0BE8A, #FCF6F0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
 }
 
 h2 {
@@ -181,7 +186,8 @@ h6 {
 
 a {
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
     }
 }
@@ -230,13 +236,13 @@ path {
         margin-bottom: 32px;
     }
 
-    ul{
-        li{
+    ul {
+        li {
             position: relative;
             padding-left: 44px;
             margin-bottom: 30px;
 
-            &:before{
+            &:before {
                 content: '';
                 position: absolute;
                 background-image: url('/image/li_img.svg');
@@ -368,6 +374,7 @@ path {
         path {
             stroke: #FFF;
         }
+
         cursor: pointer;
     }
 
@@ -494,5 +501,5 @@ path {
     h6 {
         font-size: 15px;
     }
-    
+
 }

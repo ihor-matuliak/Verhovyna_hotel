@@ -73,10 +73,13 @@ $(document).ready(function () {
     // Adaptive image
     function setImgHeight(classPhotoWrap, correlation) {
         let imgList = document.getElementsByClassName(classPhotoWrap);
-        let width = imgList[0].offsetWidth;
-        let height = width * correlation;
-        for (i = 0; i < imgList.length; i++) {
-            imgList[i].style.height = `${height}px`;
+        if(imgList.length>0){
+            console.log(classPhotoWrap)
+            let width = imgList[0].offsetWidth;
+            let height = width * correlation;
+            for (i = 0; i < imgList.length; i++) {
+                imgList[i].style.height = `${height}px`;
+            }
         }
     }
 

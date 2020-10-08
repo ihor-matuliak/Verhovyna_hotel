@@ -89,6 +89,10 @@ h6 {
 
 h1 {
   font-size: 56px;
+  background: -webkit-linear-gradient(#E0BE8A, #FCF6F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
 }
 
 h2 {

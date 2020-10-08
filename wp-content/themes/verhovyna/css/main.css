@@ -741,6 +741,20 @@
   max-height: 746px;
 }
 
+.room_detail .title_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: right;
+}
+
 .room_detail .chess_section .block_info {
   padding-top: 0;
   padding-bottom: 0;
@@ -949,6 +963,186 @@
           justify-content: flex-end;
 }
 
+.about_us_page .left_editor.text_editor {
+  padding-right: 120px;
+}
+
+.about_us_page .section_benefits {
+  padding-top: 120px;
+}
+
+.about_us_page .left_editor h2 {
+  margin-top: 12px;
+}
+
+.about_us_page h1 {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.banner_main_nav a {
+  opacity: 0.4;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.banner_main_nav a:hover {
+  opacity: 1;
+}
+
+.excursion_page .banner_main {
+  margin-bottom: 120px;
+}
+
+.excursion_block {
+  margin: 0 auto 64px;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1112px;
+}
+
+.excursion_title_box {
+  padding: 42px 24px;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.excursion_title_box h2 {
+  color: #FCF6F0;
+  letter-spacing: 0.02;
+}
+
+.excursion_title_box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #16191D;
+  opacity: 0.72;
+  z-index: 0;
+}
+
+.excursion_description_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.excursion_description_wrapper .text_editor {
+  width: 58%;
+}
+
+.excursion_description_wrapper .button_wrapper {
+  width: 42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.spec_container {
+  padding-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px 40px;
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 50, 57, 0)), to(rgba(43, 50, 57, 0.7)));
+  background: linear-gradient(180deg, rgba(43, 50, 57, 0) 0%, rgba(43, 50, 57, 0.7) 100%);
+  z-index: 10;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 3px solid #D6B480;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  z-index: 15;
+}
+
+.card .link {
+  bottom: -40px;
+  z-index: 20;
+  color: #FCF6F0;
+  left: 40px;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.card:hover::after {
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  opacity: 1;
+}
+
+.card:hover .grid_title {
+  bottom: 80px;
+}
+
+.card:hover .link {
+  bottom: 40px;
+  opacity: 1;
+}
+
+.card .link {
+  position: absolute;
+}
+
+.card .grid_title {
+  font-family: 'Azbuka_04';
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 1600px) {
   .page_description {
     padding: 90px 0 80px;
@@ -1141,8 +1335,11 @@
   .detail_chess_second .block_img {
     margin-top: 0;
   }
-  .room_detail .chess_section.chess_section_second .block_img.detail_chess_img {
-    max-height: 350px;
+  .room_detail .chess_section.detail_chess_second .block_img {
+    max-height: 550px;
+  }
+  .excursion_page .banner_main {
+    margin-bottom: 70px;
   }
 }
 
@@ -1182,6 +1379,9 @@
   }
   .chess_section {
     margin-bottom: 0;
+  }
+  .chess_section.detail_chess_second .container_left {
+    padding-right: 0;
   }
 }
 
@@ -1241,6 +1441,22 @@
   }
   .banner_list_item {
     margin-bottom: 16px;
+  }
+  .about_us_page .left_editor.text_editor {
+    padding-right: 0;
+  }
+  .excursion_description_wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .excursion_description_wrapper .text_editor {
+    width: 100%;
+  }
+  .excursion_description_wrapper .button_wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 12px auto 0;
   }
 }
 
