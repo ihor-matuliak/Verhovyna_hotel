@@ -607,6 +607,120 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 }
 
+.section_description_page{
+    background-color: $bg_color;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    .description_page,
+    .description_img_block{
+        width: 50%;
+    }
+
+    .description_page{
+        padding-right: 40px;
+    }
+
+    .description_logo_wrap{
+        margin-bottom: 24px;
+
+        img{
+            display: block;
+            max-width: 220px;
+        }
+    }
+
+    .description_img_block{
+        display: flex;
+        justify-content: flex-end;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.section_cosmetology_services{
+    .services_wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service_block{
+        display: flex;
+        width: 50%;
+    }
+
+    .service_name,
+    .service_img{
+        width: 50%;
+    }
+
+    .service_name{
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 43px;
+            height: 43px;
+            background-color: #FFFFFF;
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%) rotate(45deg);
+        }
+    }
+
+    .name_wrap{
+        position: absolute;
+        width: fit-content;
+        max-width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .name{
+        font-family: 'Azbuka_04';
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        color: $text_color;
+        opacity: 0.8;
+        margin-bottom: 16px;
+    }
+
+    .service_img{
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.services_wrap:nth-child(2n){
+    .service_block{
+        flex-direction: row-reverse;
+    }
+
+    .service_name{
+        &:after{
+            top: 50%;
+            left: 0;
+            right: inherit;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+
 @media screen and (max-width:1600px){
     .chess_section{
         .block_img{
@@ -742,6 +856,13 @@ $outside_width: calc((100vw - 1280px) / 2);
             margin-bottom: 0;
         }
     }
+
+    .section_description_page{
+        .container{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -773,6 +894,12 @@ $outside_width: calc((100vw - 1280px) / 2);
             .item_text{
                 padding-right: 0;
             }
+        }
+    }
+
+    .section_cosmetology_services{
+        .name{
+            font-size: 24px;
         }
     }
 }
@@ -937,11 +1064,63 @@ $outside_width: calc((100vw - 1280px) / 2);
             margin: 32px auto 0;
         }
     }
+
+    .section_description_page{
+        .container{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
     
+    .section_cosmetology_services{        
+        .services_wrap:nth-child(2n+1){
+            .service_block:nth-child(2n){
+                flex-direction: row-reverse;
+
+                .service_name:after{
+                    left: 0;
+                    right: inherit;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+        }
+
+        .services_wrap:nth-child(2n){
+            .service_block:nth-child(2n+1){
+                flex-direction: inherit;
+
+                .service_name:after{
+                    left: inherit;
+                    right: 0;
+                    transform: translate(50%, -50%) rotate(45deg);
+                }
+            }
+        }
+
+        .service_name{
+            &:after{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .service_block{
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width:768px){
+    .section_description_page{
+        .description_page{
+            width: 100%;
+            padding-right: 0;
+        }
 
+        .description_img_block{
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width:576px){
@@ -968,4 +1147,47 @@ $outside_width: calc((100vw - 1280px) / 2);
             }
         }
     } 
+
+    .section_cosmetology_services{
+        .services_wrap:nth-child(2n+1),
+        .services_wrap:nth-child(2n){
+            .service_block:nth-child(2n+1),
+            .service_block:nth-child(2n){
+                flex-direction: inherit;
+
+                .service_name{
+                    &:after{
+                        top: inherit;
+                        left: 50%;
+                        right: inherit;
+                        bottom: 0;
+                        transform: translate(-50%, 50%) rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        .service_block{
+            flex-wrap: wrap;
+        }
+
+        .service_name,
+        .service_img{
+            width: 100%;
+        }
+
+        .name_wrap{
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            top: inherit;
+            left: inherit;
+            right: inherit;
+            transform: translate(0);
+            text-align: center;
+            padding: 40px 0 24px;
+        }
+    }
+
+    
 }
