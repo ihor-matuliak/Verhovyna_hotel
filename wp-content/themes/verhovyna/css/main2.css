@@ -89,6 +89,10 @@ h6 {
 
 h1 {
   font-size: 56px;
+  background: -webkit-linear-gradient(#E0BE8A, #FCF6F0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
 }
 
 h2 {
@@ -428,6 +432,14 @@ path {
   h6 {
     font-size: 15px;
   }
+}
+
+.bg_color_main {
+  background-color: #FCF6F0;
+}
+
+.pb_0 {
+  padding-bottom: 0;
 }
 
 a,
@@ -1283,6 +1295,32 @@ path {
   background-color: #FCF6F0;
 }
 
+.aesthetic_slider.offer {
+  padding-bottom: 40px;
+}
+
+.slider_three_second.slider_three_wrapper {
+  padding-left: 0;
+}
+
+.slider_three_second.slider_three_wrapper .slick-list {
+  padding-right: 0;
+  margin-right: -40px;
+}
+
+.slider_three_second.slider_three_wrapper .prev_slide {
+  left: 0;
+}
+
+.slider_three_second.slider_three_wrapper .next_slide {
+  left: 60px;
+}
+
+.slider_three_second.slider_three_wrapper .slick-dots {
+  width: 90% !important;
+  left: 10%;
+}
+
 @media screen and (max-width: 1600px) {
   .chess_section .block_img {
     width: 55%;
@@ -1399,6 +1437,15 @@ path {
   }
 }
 
+@media screen and (max-width: 1360px) {
+  .slider_three_second.slider_three_wrapper {
+    padding-left: 0;
+  }
+  .slider_three_second.slider_three_wrapper .slick-list {
+    margin-right: -24px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .chess_section .wrap_btns {
     display: block;
@@ -1418,6 +1465,10 @@ path {
   }
   .section_cosmetology_services .name {
     font-size: 24px;
+  }
+  .slider_three_second.slider_three_wrapper .slick-dots {
+    width: 100%;
+    left: 0;
   }
 }
 
@@ -1668,6 +1719,12 @@ path {
   }
   .section_programs_center .program_block:nth-last-child() {
     border-bottom: 0;
+  }
+  .slider_three_second.slider_three_wrapper {
+    padding-left: 0;
+  }
+  .slider_three_second.slider_three_wrapper .slick-list {
+    padding-right: 70px;
   }
 }
 /*# sourceMappingURL=main2.css.map */
