@@ -434,6 +434,10 @@ path {
   }
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .bg_color_main {
   background-color: #FCF6F0;
 }
@@ -1087,6 +1091,16 @@ path {
 }
 
 .section_description_page .description_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-right: 40px;
 }
 
@@ -1110,6 +1124,9 @@ path {
 
 .section_description_page .description_img_block img {
   max-width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .section_cosmetology_services .services_wrap {
@@ -1321,15 +1338,148 @@ path {
   left: 10%;
 }
 
-.pools_page .section_description_page .container {
+.pools_page .section_description_page .container,
+.gallery_spa .section_description_page .container,
+.restaurant .section_description_page .container {
   padding-bottom: 0;
 }
 
 .pools_page .offer,
 .sport_page .offer,
 .solemn_events_page .offer,
-.conference_hall .offer {
+.conference_hall .offer,
+.gallery_spa .offer,
+.restaurant .offer {
   padding-top: 0;
+}
+
+.popup_main {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  z-index: 100;
+  padding: 24px 0;
+}
+
+.popup_main.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.popup_main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: .7;
+}
+
+.popup_main .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  z-index: 200;
+  overflow-x: scroll;
+}
+
+.popup_main .content .close_popup {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.popup_main .content .close_popup:hover path {
+  stroke: #D6B480;
+}
+
+.popup_main h2 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.booking_popup .content {
+  max-width: 524px;
+  max-height: 774px;
+  padding: 56px;
+}
+
+.special_proposition .content {
+  max-width: 740px;
+  max-height: 870px;
+}
+
+.special_proposition .popup_img {
+  position: relative;
+  max-height: 435px;
+}
+
+.special_proposition .popup_img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.special_proposition .popup_img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #16191D;
+  opacity: 0.5;
+}
+
+.special_proposition .popup_info {
+  padding: 48px 56px 68px;
+}
+
+.special_proposition .text {
+  margin-bottom: 40px;
+}
+
+.special_proposition .btn_booking {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #42474C;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  border: 2px solid #D6B480;
+  padding: 22px 0;
+}
+
+.special_proposition .btn_booking:hover {
+  color: #D6B480;
+}
+
+.special_proposition .close_popup path {
+  stroke: #FFFFFF;
 }
 
 @media screen and (max-width: 1600px) {
