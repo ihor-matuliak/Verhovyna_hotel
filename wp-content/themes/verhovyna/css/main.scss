@@ -1578,7 +1578,10 @@ $outside_width: calc((100vw - 1328px) / 2);
     .title_wrapper {
         margin-right: 60px;
     }
-
+    .slider_title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 @media only screen and (max-width: 1024px) {

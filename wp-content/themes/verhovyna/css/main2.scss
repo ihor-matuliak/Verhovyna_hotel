@@ -8,6 +8,14 @@ $disabled: #EDEFF2;
 $bg_color: #FCF6F0;
 
 
+.bg_color_main{
+    background-color: $bg_color;
+}
+
+.pb_0{
+    padding-bottom: 0;
+}
+
 a,
 path{
     transition: all .4s;
@@ -145,8 +153,8 @@ $outside_width: calc((100vw - 1280px) / 2);
 
     .block_info{
         width: 38%;
-        padding-top: 150px;
-        padding-bottom: 150px;
+        height: fit-content;
+        margin: auto 0;
     }
 
     img{
@@ -650,6 +658,21 @@ $outside_width: calc((100vw - 1280px) / 2);
         flex-wrap: wrap;
     }
 
+    .services_wrap:nth-child(2n){
+        .service_block{
+            flex-direction: row-reverse;
+        }
+    
+        .service_name{
+            &:after{
+                top: 50%;
+                left: 0;
+                right: inherit;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
     .service_block{
         display: flex;
         width: 50%;
@@ -706,18 +729,134 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 }
 
-.services_wrap:nth-child(2n){
-    .service_block{
-        flex-direction: row-reverse;
+.medical_center_gallery.gallery{
+    background-color: $bg_color;
+    padding-top: 0;
+    &:before{
+        display: none;
     }
 
-    .service_name{
-        &:after{
-            top: 50%;
-            left: 0;
-            right: inherit;
-            transform: translate(-50%, -50%) rotate(45deg);
+    .container{
+        margin-bottom: 0;
+    }
+
+    .grid_title{
+        font-family: 'Azbuka_04';
+        font-weight: 300;
+    }
+}
+
+.section_programs_center{
+    background-color: $bg_color;
+
+    .container{
+        padding-top: 120px;
+    }
+
+    h2{
+        font-weight: 300;
+        margin-bottom: 40px;
+    }
+
+    .programs_wrap{
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #2B3239;
+    }
+
+    .program_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(100% / 3);
+        border-right: 1px solid #2B3239;
+        border-bottom: 1px solid #2B3239;
+        transition: all .4s;
+        padding: 46px 46px 32px;
+
+        &:hover{
+            background-color: #FFFFFF;
         }
+    }
+
+    .program_block:nth-child(3n+3){
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid #2B3239;
+    }
+
+    .program_block:nth-last-child(-n+3){
+        border-bottom: 1px solid transparent;
+    }
+
+    .program_name{
+        font-size: 24px;
+        @include two_rows();
+    }
+
+    img{
+        max-height: 100px;
+        margin-bottom: 24px;
+    }
+
+    .circle_btn{
+        .circle{
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover{
+            .circle:before{
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}
+
+.medical_slider.offer{
+    background-color: $bg_color;
+}
+
+.aesthetic_slider.offer{
+    padding-bottom: 40px;
+}
+
+.slider_three_second.slider_three_wrapper{
+    padding-left: 0;
+
+    .slick-list{
+        padding-right: 0;
+        margin-right: -40px;
+    }
+
+    .prev_slide{
+        left: 0;
+    }
+
+    .next_slide{
+        left: 60px;
+    }
+
+    .slick-dots{
+        width: 90%!important;
+        left: 10%;
+    }
+}
+
+.pools_page{
+    .section_description_page{
+        .container{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.pools_page,
+.sport_page,
+.solemn_events_page,
+.conference_hall{
+    .offer{
+        padding-top: 0;
     }
 }
 
@@ -765,11 +904,6 @@ $outside_width: calc((100vw - 1280px) / 2);
         .block_img,
         .block_info{
             width: 50%;
-        }
-
-        .block_info{
-            padding-top: 60px;
-            padding-bottom: 60px;
         }
     }
 
@@ -863,6 +997,35 @@ $outside_width: calc((100vw - 1280px) / 2);
             padding-bottom: 80px;
         }
     }
+
+    .section_programs_center{
+        .container{
+            padding-top: 80px;
+        }
+
+        .program_block{
+            padding: 24px;
+        }
+
+        img{
+            max-height: 70px;
+            margin-bottom: 16px;
+        }
+
+        .program_name{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:1360px){
+    .slider_three_second.slider_three_wrapper{
+        padding-left: 0;
+    
+        .slick-list{
+            margin-right: -24px;
+        }
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -900,6 +1063,13 @@ $outside_width: calc((100vw - 1280px) / 2);
     .section_cosmetology_services{
         .name{
             font-size: 24px;
+        }
+    }
+
+    .slider_three_second.slider_three_wrapper{
+        .slick-dots{
+            width: 100%;
+            left: 0;
         }
     }
 }
@@ -951,6 +1121,18 @@ $outside_width: calc((100vw - 1280px) / 2);
         .block_info{
             padding-top: 0;
             padding-bottom: 40px;
+
+            *:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .contact_info{
+            margin-bottom: 24px;
+        }
+
+        .text{
+            margin-bottom: 16px;
         }
 
         
@@ -1108,6 +1290,33 @@ $outside_width: calc((100vw - 1280px) / 2);
             width: 100%;
         }
     }
+
+    .section_programs_center{
+        .container{
+            padding-top: 60px;
+        }
+
+        .program_block{
+            width: calc(100%/2);
+        }
+
+        .program_block:nth-child(3n+3){
+            border-right: inherit;
+            border-bottom: inherit;
+        }
+    
+        .program_block:nth-last-child(-n+3){
+            border-bottom: inherit;
+        }
+
+        .program_block:nth-child(2n){
+            border-right: transparent;
+        }
+
+        .program_block:nth-last-child(-n+2){
+            border-bottom-color: transparent;
+        }
+    }
 }
 
 @media screen and (max-width:768px){
@@ -1189,5 +1398,28 @@ $outside_width: calc((100vw - 1280px) / 2);
         }
     }
 
+    .section_programs_center{
+        .program_block{
+            width: calc(100%);
+            border-right: 0!important;
+        }
+
+        .program_block:nth-last-child(-n+2){
+            border-bottom: inherit;
+        }
+
+        .program_block:nth-last-child(){
+            border-bottom: 0;
+        }
+
+    }
+
+    .slider_three_second.slider_three_wrapper{
+        padding-left: 0;
+    
+        .slick-list{
+            padding-right: 70px;
+        }
+    }
     
 }

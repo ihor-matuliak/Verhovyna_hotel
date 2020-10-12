@@ -98,11 +98,14 @@ $(document).ready(function () {
     const sliderThree = document.querySelectorAll('.slider_three_wrapper');
     if (sliderThree.length > 0) {
         if (window.innerWidth > 1280) {
-            const dots = document.querySelector('.slider_three_show .slick-dots');
+            const dots = document.querySelectorAll('.slider_three_show .slick-dots');
             const btnShow = document.querySelector('#showAllSlidesBtn');
-            const dotsWidth = dots.offsetWidth;
-            const btnWidth = btnShow.offsetWidth;
-            dots.style.width = ` ${dotsWidth - btnWidth - 60}px`;
+            
+            for(let i=0; i<dots.length; i++){
+                const dotsWidth = dots[i].offsetWidth;
+                const btnWidth = btnShow.offsetWidth;
+                dots[i].style.width = `${dotsWidth - btnWidth - 60}px`;
+            }
         }
 
     }
