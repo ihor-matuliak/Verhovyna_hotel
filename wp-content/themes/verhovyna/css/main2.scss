@@ -843,6 +843,23 @@ $outside_width: calc((100vw - 1280px) / 2);
     }
 }
 
+.pools_page{
+    .section_description_page{
+        .container{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.pools_page,
+.sport_page,
+.solemn_events_page,
+.conference_hall{
+    .offer{
+        padding-top: 0;
+    }
+}
+
 @media screen and (max-width:1600px){
     .chess_section{
         .block_img{
@@ -1104,6 +1121,18 @@ $outside_width: calc((100vw - 1280px) / 2);
         .block_info{
             padding-top: 0;
             padding-bottom: 40px;
+
+            *:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .contact_info{
+            margin-bottom: 24px;
+        }
+
+        .text{
+            margin-bottom: 16px;
         }
 
         

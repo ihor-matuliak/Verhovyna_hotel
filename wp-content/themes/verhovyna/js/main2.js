@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // adaptive block
     const serviceImg = document.querySelectorAll('.service_img')
-    const chessBlockImg = document.querySelectorAll('.block_img')
+    const chessBlockImg = document.querySelectorAll('.chess_block .block_img')
     const medicalProgramBlock = document.querySelectorAll('.program_block')
 
     adaptiveBlock = (nameBlock, relative) => {

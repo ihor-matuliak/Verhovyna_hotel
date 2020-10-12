@@ -1321,6 +1321,17 @@ path {
   left: 10%;
 }
 
+.pools_page .section_description_page .container {
+  padding-bottom: 0;
+}
+
+.pools_page .offer,
+.sport_page .offer,
+.solemn_events_page .offer,
+.conference_hall .offer {
+  padding-top: 0;
+}
+
 @media screen and (max-width: 1600px) {
   .chess_section .block_img {
     width: 55%;
@@ -1513,6 +1524,15 @@ path {
   .chess_section .block_info {
     padding-top: 0;
     padding-bottom: 40px;
+  }
+  .chess_section .block_info *:last-child {
+    margin-bottom: 0;
+  }
+  .chess_section .contact_info {
+    margin-bottom: 24px;
+  }
+  .chess_section .text {
+    margin-bottom: 16px;
   }
   .section_benefits .benefits_block:not(:last-child) {
     margin-bottom: 60px;
