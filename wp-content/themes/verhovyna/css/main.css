@@ -1350,6 +1350,18 @@
           transform: translateX(-15px);
 }
 
+.gallery_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1600px) {
   .page_description {
     padding: 90px 0 80px;
@@ -1366,6 +1378,16 @@
   }
   .room_detail .chess_section .container_right .block_info {
     padding-left: 5%;
+  }
+  .slider .slick-list {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .counter_wrapper {
+    right: 8.5%;
+  }
+  .slider .next_slide, .slider .prev_slide {
+    right: 9%;
   }
 }
 
@@ -1417,6 +1439,9 @@
   .room_slider .next_slide {
     right: unset;
     left: 68px;
+  }
+  .slide_info_wrapper {
+    width: calc(100% - 112px);
   }
 }
 
@@ -1560,6 +1585,22 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .slider_description {
+    margin: 12px 0;
+  }
+  .section_slider {
+    padding: 60px 0 20px;
+  }
+  .counter_wrapper {
+    top: 40%;
+  }
+  .slider .slide_info_wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .room_properties {
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1590,6 +1631,24 @@
   .rooms_services {
     padding-top: 70px;
   }
+  .counter_wrapper {
+    display: none;
+  }
+  .slide {
+    margin: 0 24px;
+  }
+  .slider .slick-list {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .slide_info_wrapper {
+    width: calc(100% - 60px);
+    padding: 24px 32px;
+  }
+  .slider .slick-current .slide_info_wrapper {
+    -webkit-transform: translate(30px, -64px);
+    transform: translate(30px, -64px);
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1601,6 +1660,9 @@
   }
   .chess_section.detail_chess_second .container_left {
     padding-right: 0;
+  }
+  .slider_title {
+    margin-bottom: 40px;
   }
 }
 
@@ -1783,6 +1845,33 @@
   .list_wrspper li {
     margin-bottom: 10px;
     width: 100%;
+  }
+  .slider .slick-current .slide_info_wrapper {
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  .slide_info_wrapper {
+    width: 100%;
+  }
+  .slide {
+    margin: 0 12px;
+  }
+  .room_properties {
+    width: 100%;
+  }
+  .slider .slide_info_wrapper {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  .slider .slick-current .slide_info_wrapper {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+  .slider .slick-list {
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }
 
