@@ -1362,6 +1362,135 @@
   opacity: 0;
 }
 
+.gallery_page .gallery::before {
+  display: none;
+}
+
+.contact_page {
+  padding-top: 120px;
+}
+
+.map_wrapper {
+  width: 50%;
+}
+
+.contacts {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  min-height: 100vh;
+}
+
+.contacts h1 {
+  color: #D6B480;
+  -webkit-text-fill-color: #D6B480;
+}
+
+.contacts h2 {
+  margin-top: 52px;
+  margin-bottom: 12px;
+}
+
+.contacts .circle_btn {
+  margin-top: 32px;
+}
+
+.contacts_content {
+  width: 50%;
+  padding-top: 88px;
+  padding-left: 108px;
+  padding-right: calc((100vw - 1328px) / 2 + 62px);
+  padding-bottom: 120px;
+}
+
+.short_description {
+  margin-bottom: 48px;
+}
+
+.adress_title {
+  opacity: .5;
+  margin-bottom: 8px;
+}
+
+.adress_box {
+  margin-bottom: 32px;
+}
+
+.phone_number {
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.phone_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 20px;
+}
+
+.social_box {
+  width: 50%;
+}
+
+.adress_text:hover {
+  color: #D6B480;
+}
+
+.social_link {
+  margin-right: 12px;
+}
+
+.social_link:hover path {
+  fill: #D6B480;
+}
+
+.adress_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.transfer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 112px;
+}
+
+.transfer_container h2 {
+  margin-bottom: 12px;
+}
+
+.transfer_content, .transfer_form_wrapper {
+  width: 50%;
+}
+
+.transfer_content {
+  padding-right: 64px;
+}
+
+.transfer_content .phone_box {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.transfer_form_wrapper {
+  padding-left: 64px;
+}
+
 @media only screen and (max-width: 1600px) {
   .page_description {
     padding: 90px 0 80px;
@@ -1601,6 +1730,52 @@
   .room_properties {
     width: 45%;
   }
+  .contacts_content {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+  .contacts {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .map_wrapper, .contacts_content {
+    width: 100%;
+  }
+  .adress_box {
+    width: 100%;
+  }
+  .social_box, .phone_box {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-right: 32px;
+  }
+  .short_description {
+    margin-bottom: 24px;
+  }
+  .adress_box {
+    margin-bottom: 22px;
+  }
+  .contacts {
+    height: auto;
+  }
+  .contacts h2 {
+    margin-top: 20px;
+  }
+  .map_wrapper {
+    min-height: 50vh;
+  }
+  .transfer_container {
+    padding-top: 60px;
+  }
+  .transfer_content {
+    padding-right: 24px;
+  }
+  .transfer_form_wrapper {
+    padding-left: 24px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1759,6 +1934,21 @@
   }
   .circle_btn {
     font-size: 14px;
+  }
+  .contacts_content {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+  .transfer_content, .transfer_form_wrapper {
+    width: 100%;
+  }
+  .transfer_form_wrapper {
+    padding-left: 0;
+  }
+  .transfer_content {
+    padding-right: 0;
   }
 }
 

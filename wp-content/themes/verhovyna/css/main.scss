@@ -1332,7 +1332,104 @@ $outside_width: calc((100vw - 1328px) / 2);
     visibility: hidden;
     opacity: 0;
 }
+.gallery_page{
+    .gallery::before {
+       display: none;
+    }
+}
+.contact_page{
+        padding-top: 120px;
+}
+.map_wrapper{
+    width: 50%;
+}
+.contacts{
+    width: 100vw;
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    h1{
+        color: $title_color;
+        -webkit-text-fill-color: $title_color;
+    }
+    h2{
+        margin-top: 52px;
+        margin-bottom: 12px;
+    }
+    .circle_btn{
+        margin-top: 32px;
+    }
+}
+.contacts_content{
+    width: 50%;
+    padding-top: 88px;
+    padding-left: 108px;
+    padding-right: calc((100vw - 1328px) / 2 + 62px);
+    padding-bottom: 120px;
+}
+.short_description{
+    margin-bottom: 48px;
+}
+.adress_title{
+    opacity: .5;
+    margin-bottom: 8px;
+    // line-height: 1;
+}
+.adress_box{
+    margin-bottom: 32px;
+}
+.phone_number{
+    margin-bottom: 12px;
+    line-height: 1;
 
+}
+.phone_box{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-right: 20px;
+}
+.social_box{
+    width: 50%;
+}
+.adress_text{
+    &:hover{
+        color: $title_color;
+    }
+}
+.social_link{
+    margin-right: 12px;
+    &:hover{
+        path{
+            fill: $title_color;
+        }
+    }
+}
+.adress_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.transfer_container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 112px;
+    h2{
+        margin-bottom: 12px;
+    }
+}
+.transfer_content, .transfer_form_wrapper{
+    width: 50%;
+}
+.transfer_content{
+    padding-right: 64px;
+    .phone_box{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
+.transfer_form_wrapper{
+    padding-left: 64px;
+}
 @media only screen and (max-width: 1600px) {
     .page_description {
         padding: 90px 0 80px;
@@ -1621,6 +1718,49 @@ $outside_width: calc((100vw - 1328px) / 2);
     .room_properties{
         width: 45%;
     }
+    .contacts_content{
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+    .contacts{
+        flex-wrap: wrap-reverse;
+    }
+    .map_wrapper, .contacts_content{
+        width: 100%;
+    }
+    .adress_box{
+        width: 100%;
+    }
+    .social_box, .phone_box{
+        width: max-content;
+        margin-right: 32px;
+    }
+    .short_description{
+        margin-bottom: 24px;
+    }
+    .adress_box{
+        margin-bottom: 22px;
+    }
+    .contacts{
+        h2{
+            margin-top: 20px;
+        }
+        height: auto;
+    }
+    .map_wrapper{
+        min-height: 50vh;
+    }
+    .transfer_container{
+        padding-top: 60px;
+    }
+    .transfer_content {
+        padding-right: 24px;
+    }
+    .transfer_form_wrapper{
+        padding-left: 24px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1803,6 +1943,21 @@ $outside_width: calc((100vw - 1328px) / 2);
 
     .circle_btn {
         font-size: 14px;
+    }
+    .contacts_content {
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+    .transfer_content, .transfer_form_wrapper {
+        width: 100%;
+    }
+    .transfer_form_wrapper {
+        padding-left: 0;
+    }
+    .transfer_content {
+        padding-right: 0;
     }
 }
 

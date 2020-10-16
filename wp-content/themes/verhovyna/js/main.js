@@ -266,6 +266,7 @@ $(document).ready(function () {
     let img_box = document.getElementsByClassName('img_box');
     let square = document.getElementsByClassName('square');
     let doc = document.getElementsByClassName('document_img');
+    let offer = document.getElementsByClassName('offer');
 
     if (window.innerWidth >= 360 && window.innerWidth <= 1024 && square.length > 0) {
         let imgList = document.getElementsByClassName('square');
@@ -275,7 +276,7 @@ $(document).ready(function () {
             imgList[i].style.height = `${height}px`;
         }
     }
-    if (doc.length > 0) {
+    if (offer.length > 0) {
         imgHeight('slide_box', '1.31');
     }
     if (window.innerWidth <= 1024 && flex.length > 0) {
