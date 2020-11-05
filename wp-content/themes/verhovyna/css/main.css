@@ -202,6 +202,10 @@
   opacity: 0;
 }
 
+.section_slider .slider_title {
+  margin-bottom: 78px;
+}
+
 .slider_title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,12 +230,16 @@
   margin-bottom: 78px;
 }
 
+.slider_wrapper .slick-slide {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
 .slide {
   position: relative;
   -webkit-transition: all .4s linear;
   transition: all .4s linear;
-  margin-right: 64px;
-  margin-left: 64px;
+  display: block !important;
 }
 
 .slide .slide_img {
@@ -597,6 +605,10 @@
   padding-left: calc((100vw - 1328px) / 2 + 24px);
 }
 
+.slider_three_wrapper .slick-slide {
+  margin-right: 40px;
+}
+
 .slider_three_wrapper .slick-list {
   padding-right: calc((100vw - 1328px) / 2 - 20px);
 }
@@ -667,7 +679,7 @@
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  margin-right: 40px;
+  display: block !important;
 }
 
 .slide_three::before {
@@ -748,6 +760,8 @@
 
 .slide_box {
   height: 524px;
+  position: relative;
+  z-index: 1;
 }
 
 .slide_box img {
@@ -756,23 +770,6 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.slider_three_wrapper .slick-slide::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(239, 235, 234, 0.5)), color-stop(36.65%, rgba(237, 236, 231, 0.9)));
-  background: linear-gradient(90deg, rgba(239, 235, 234, 0.5) 0%, rgba(237, 236, 231, 0.9) 36.65%);
-}
-
-.slider_three_wrapper .slick-slide.slick-active::before {
-  opacity: 0;
 }
 
 .index_rooms .chess_section .link_with_img {
@@ -1491,6 +1488,104 @@
   padding-left: 64px;
 }
 
+.site-footer {
+  background-color: #16191d;
+  padding-top: 64px;
+}
+
+.site-footer .logo {
+  margin: 0 auto 20px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.site-footer .menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 900px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.site-footer .menu_list a {
+  color: #FCF6F0;
+  opacity: .8;
+  margin: 0 34px 28px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.site-footer .menu_list a::after {
+  content: '';
+  position: absolute;
+  left: -45px;
+  top: 30%;
+  width: 30px;
+  height: 1px;
+  opacity: .3;
+  background-color: #FCF6F0;
+}
+
+.site-footer .menu_list a:hover {
+  color: #D6B480;
+}
+
+.site-footer .menu_list li:first-child a::after {
+  display: none;
+}
+
+.footer_social_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+.footer_social_wrap a {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.footer_social_wrap a:hover path {
+  fill: #D6B480;
+}
+
+.book_footer {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 48px auto 55px;
+  text-align: center;
+}
+
+.book_footer p {
+  color: #FCF6F0;
+  opacity: .3;
+}
+
+.book_footer a {
+  color: #D6B480;
+  font-size: 21px;
+}
+
+.copyright_wrapper {
+  padding: 42px 0;
+  background-color: rgba(66, 71, 76, 0.4);
+}
+
 @media only screen and (max-width: 1600px) {
   .page_description {
     padding: 90px 0 80px;
@@ -1776,6 +1871,9 @@
   .transfer_form_wrapper {
     padding-left: 24px;
   }
+  .gallery {
+    padding-top: 70px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1860,6 +1958,9 @@
   }
   .banner_second .title_wrapper {
     margin-right: 0;
+  }
+  .site-footer .menu_list a::after {
+    display: none;
   }
 }
 
@@ -1949,6 +2050,17 @@
   }
   .transfer_content {
     padding-right: 0;
+  }
+  .gallery {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .services_img {
+    display: none;
+  }
+  .site-footer .menu_list li {
+    width: 100%;
+    text-align: center;
   }
 }
 
